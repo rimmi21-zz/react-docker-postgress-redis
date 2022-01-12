@@ -42,20 +42,22 @@ class Fib extends Component {
     return entries;
   }
   render() {
-    <div>
-      <form onSubmit={this.handleSubmit}>
-        <label>Enter your index: </label>
-        <input
-          value={this.state.index}
-          onChange={(event) => this.setState({ index: event.target.value })}
-        />
-        <button>Submit</button>
-      </form>
-      <h3>Indexes I have Seen: </h3>
-      {this.renderSeenIndexes}
-      <h3>Calculated Values: </h3>
-      {this.renderValues}
-    </div>;
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>Enter your index: </label>
+          <input
+            value={this.state.index}
+            onChange={(event) => this.setState({ index: event.target.value })}
+          />
+          <button>Submit</button>
+        </form>
+        <h3>Indexes I have Seen: </h3>
+        {this.renderSeenIndexes}
+        <h3>Calculated Values: </h3>
+        {this.renderValues}
+      </div>
+    );
   }
 }
 export default Fib;

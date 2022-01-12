@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import OtherPage from "./OtherPage";
+import otherPage from "./otherPage";
 import Fib from "./Fib";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
         <div>
           <Route exact path="/" component={Fib} />
-          <Route path="/otherpage" component={OtherPage} />
+          <Route path="/otherpage" component={otherPage} />
         </div>
       </div>
     </Router>
