@@ -1,24 +1,24 @@
-import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import otherPage from "./otherPage";
+import React, { Fragment, Component } from "react";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+
 import Fib from "./Fib";
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Link to="/">Home</Link>
-        <Link to="/otherpage">Other Page</Link>
-
-        <div>
-          <Route exact path="/" component={Fib} />
-          <Route path="/otherpage" component={otherPage} />
-        </div>
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Fragment>
+          <Router>
+            <Routes>
+              <Route exact path="/" element={<Fib />} />
+            </Routes>
+          </Router>
+        </Fragment>
       </div>
-    </Router>
-  );
+    );
+  }
 }
 
 export default App;
